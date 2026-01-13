@@ -3,194 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutiteca Abierta - Soberanía Alimentaria</title>
-    <style>
-        :root {
-            --primario: #e67e22; /* Color naranja fruta */
-            --secundario: #27ae60; /* Verde hoja */
-            --oscuro: #2c3e50;
-            --claro: #fdfaf5;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--claro); color: var(--oscuro); margin: 0; line-height: 1.6; }
-        header { background: var(--oscuro); color: white; padding: 2rem; text-align: center; border-bottom: 5px solid var(--primario); }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        
-        /* Secciones */
-        section { background: white; padding: 25px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: var(--primario); border-bottom: 2px solid #eee; padding-bottom: 10px; }
-
-        /* Calculadora */
-        .calc-box { display: grid; gap: 15px; background: #fff8f0; padding: 20px; border-radius: 10px; border: 1px solid #ffe0b2; }
-        input, select, button { padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1rem; }
-        button { background: var(--primario); color: white; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        button:hover { background: #d35400; }
-        #resultado { margin-top: 15px; padding: 15px; background: var(--secundario); color: white; border-radius: 8px; display: none; }
-
-        /* Multimedia Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 10px; text-align: center; }
-        .card img { max-width: 100%; border-radius: 8px; }
-        .btn-descarga { display: inline-block; margin-top: 10px; padding: 8px 15px; background: var(--secundario); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; }
-
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #7f8c8d; }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>🍎 FRUTITECA ABIERTA</h1>
-    <p>Conocimiento Libre para la Soberanía Alimentaria</p>
-</header>
-
-<div class="container">
-    
-    <section>
-        <h2>¿Por qué deshidratar?</h2>
-        <p>La deshidratación solar nos permite rescatar los excedentes de las cosechas locales, eliminando la dependencia de conservantes industriales y asegurando nutrientes para nuestras familias durante todo el año. <strong>¡Comida libre, pueblos soberanos!</strong></p>
-    </section>
-
-    <section>
-        <h2>🧮 Calculadora de Autonomía</h2>
-        <div class="calc-box">
-            <label>Elige la fruta:</label>
-            <select id="fruta">
-                <option value="0.15">Mango (Rinde 15%)</option>
-                <option value="0.20">Manzana (Rinde 20%)</option>
- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutiteca Abierta - Manual de Frutas</title>
+    <title>Frutiteca Abierta - Manual de Conservación</title>
     <style>
         :root {
             --primario: #d35400; 
             --secundario: #27ae60; 
             --claro: #fdfaf5;
             --oscuro: #2c3e50;
+            --info: #2980b9;
         }
         body { font-family: 'Segoe UI', sans-serif; background-color: var(--claro); color: var(--oscuro); margin: 0; padding: 0; }
-        header { background: var(--oscuro); color: white; padding: 2rem; text-align: center; border-bottom: 5px solid var(--primario); }
+        header { background: var(--oscuro); color: white; padding: 2.5rem 1rem; text-align: center; border-bottom: 5px solid var(--primario); }
         .container { max-width: 900px; margin: auto; padding: 20px; }
         
         section { background: white; padding: 25px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: var(--primario); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: var(--primario); border-bottom: 2px solid #eee; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
 
         /* Tabla Estilizada */
         .tabla-contenedor { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
         th { background-color: #f8f9fa; color: var(--primario); }
-        tr:hover { background-color: #fff9f0; }
 
-        /* Calculadora Mejorada */
+        /* Bloques de Almacenamiento */
+        .storage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .storage-card { padding: 15px; border-radius: 10px; border-left: 5px solid var(--secundario); background: #f1f8f4; }
+
+        /* Calculadora */
         .calc-box { background: #fff8f0; padding: 20px; border-radius: 10px; border: 1px solid #ffe0b2; }
         input, select, button { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; }
         button { background: var(--primario); color: white; border: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
         button:hover { background: #a04000; }
         #resultado { margin-top: 15px; padding: 15px; background: var(--secundario); color: white; border-radius: 8px; display: none; }
 
-        .consejo { background: #e8f4fd; border-left: 5px solid #2980b9; padding: 15px; margin-top: 10px; border-radius: 4px; }
+        .importante { background: #fff5f5; border-left: 5px solid #c0392b; padding: 15px; margin-top: 15px; border-radius: 4px; }
+        footer { text-align: center; padding: 40px; color: #7f8c8d; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>🍎 FRUTITECA ABIERTA</h1>
-    <p>Tiempos y Técnicas para la Soberanía Alimentaria</p>
+    <p>Manual Completo: Del Huerto al Almacén Soberano</p>
 </header>
 
 <div class="container">
 
     <section>
-        <h2>🌡️ Guía de Tiempos: Horno Convencional</h2>
-        <p>Mantén el horno a <strong>55°C - 60°C</strong>. Si tu horno no baja tanto, deja la puerta entreabierta con una cuchara de madera.</p>
-        
+        <h2>🌡️ Tiempos de Secado (Horno 55°C)</h2>
         <div class="tabla-contenedor">
             <table>
                 <thead>
-                    <tr>
-                        <th>Fruta</th>
-                        <th>Preparación</th>
-                        <th>Tiempo Est.</th>
-                        <th>Textura Final</th>
-                    </tr>
+                    <tr><th>Fruta</th><th>Prep.</th><th>Horas</th><th>Textura</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Manzana</strong></td>
-                        <td>Rodajas de 5mm</td>
-                        <td>6 - 8 horas</td>
-                        <td>Flexible / Crujiente</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mango</strong></td>
-                        <td>Tiras largas</td>
-                        <td>8 - 10 horas</td>
-                        <td>Cuerosa (Chewy)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Naranja</strong></td>
-                        <td>Rodajas con cáscara</td>
-                        <td>8 - 12 horas</td>
-                        <td>Quebradiza</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Fresa</strong></td>
-                        <td>Mitades o láminas</td>
-                        <td>7 - 9 horas</td>
-                        <td>Firme / Pegajosa</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Guineo (Banano)</strong></td>
-                        <td>Rodajas</td>
-                        <td>6 - 10 horas</td>
-                        <td>Cuerosa / Firme</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Uva / Arándano</strong></td>
-                        <td>Enteras (pinchar piel)</td>
-                        <td>12 - 20 horas</td>
-                        <td>Blanda (tipo pasa)</td>
-                    </tr>
+                    <tr><td><strong>Manzana / Mango</strong></td><td>Láminas</td><td>6-10h</td><td>Flexible</td></tr>
+                    <tr><td><strong>Fresa / Guineo</strong></td><td>Rodajas</td><td>7-10h</td><td>Firme</td></tr>
+                    <tr><td><strong>Uva / Arándano</strong></td><td>Enteras*</td><td>12-20h</td><td>Blanda</td></tr>
+                    <tr><td><strong>Naranja</strong></td><td>Rodajas</td><td>8-12h</td><td>Crujiente</td></tr>
                 </tbody>
             </table>
-        </div>
-        <div class="consejo">
-            <strong>💡 Consejo Soberano:</strong> Para uvas y arándanos, dales un "baño" rápido en agua hirviendo (30 seg) para romper la piel antes de meter al horno; esto reduce el tiempo a la mitad.
         </div>
     </section>
 
     <section>
-        <h2>🧮 Calculadora de Autonomía</h2>
+        <h2>📦 Almacenamiento y Conservación</h2>
+        <p>Una vez fría la fruta (espera 30 min), guárdala siguiendo estas reglas de oro:</p>
+        
+        <div class="storage-grid">
+            <div class="storage-card">
+                <h4>🫙 El Envase</h4>
+                <p>Frascos de vidrio limpios con tapa hermética. Evita el plástico si es para largo plazo.</p>
+            </div>
+            <div class="storage-card">
+                <h4>🌑 El Lugar</h4>
+                <p>Oscuro, fresco y seco. La luz del sol directa degrada las vitaminas rápidamente.</p>
+            </div>
+            <div class="storage-card">
+                <h4>⏳ El Curado</h4>
+                <p>Agita el frasco una vez al día por una semana. Si ves humedad en el vidrio, ¡seca un poco más!</p>
+            </div>
+        </div>
+
+        <div class="importante">
+            <strong>⚠️ REGLA CRÍTICA:</strong> Nunca guardes la fruta caliente. El calor genera condensación (vapor) dentro del frasco y causará moho en pocos días.
+        </div>
+    </section>
+
+    <section>
+        <h2>🧮 Calculadora de Reserva</h2>
         <div class="calc-box">
-            <label>Selecciona la fruta:</label>
             <select id="fruta">
-                <option value="0.15">Mango / Manzana (15-20%)</option>
+                <option value="0.15">Mango / Manzana / Otros (15%)</option>
                 <option value="0.25">Guineo (25%)</option>
                 <option value="0.10">Fresa / Naranja (10%)</option>
                 <option value="0.20">Uvas / Arándanos (20%)</option>
-                <option value="0.15">Otras frutas (Promedio 15%)</option>
             </select>
-            <input type="number" id="kilos" placeholder="Kilos frescos a procesar">
-            <button onclick="calcular()">Calcular Reserva Familiar</button>
+            <input type="number" id="kilos" placeholder="Kilos frescos">
+            <button onclick="calcular()">Calcular Autonomía</button>
             <div id="resultado"></div>
         </div>
     </section>
 
 </div>
 
+<footer>
+    <p>Proyecto de Acceso Libre para la Soberanía Alimentaria.<br>
+    ¡Comparte este conocimiento con tu comunidad!</p>
+</footer>
+
 <script>
     function calcular() {
         const rend = document.getElementById('fruta').value;
         const kg = document.getElementById('kilos').value;
         const res = document.getElementById('resultado');
-
         if (kg > 0) {
             const final = (kg * rend).toFixed(2);
             const raciones = Math.floor((final * 1000) / 30);
             res.style.display = 'block';
-            res.innerHTML = `<strong>Éxito:</strong> Has transformado excedentes en <b>${final} kg</b> de alimento disponible.<br>Equivale a <b>${raciones} raciones</b> de fruta pura.`;
+            res.innerHTML = `<strong>Reserva lograda:</strong> ${final} kg de alimento (${raciones} porciones).`;
         }
     }
 </script>
